@@ -20,6 +20,9 @@ namespace CustomizacaoBootstrap3
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                         "~/js/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+                        "~/js/modernizr-*"));
+
             bundles.Add(new StyleBundle("~/css/styles").Include(
                         "~/css/style.css"));
         }

@@ -263,6 +263,7 @@
     <Content Include="js\localization\methods_nl.min.js" />
     <Content Include="js\localization\methods_pt.js" />
     <Content Include="js\localization\methods_pt.min.js" />
+    <Content Include="js\modernizr-output.js" />
     <Content Include="js\npm.js" />
     <Content Include="js\scripts.js" />
     <Content Include="js\scripts.min.js" />

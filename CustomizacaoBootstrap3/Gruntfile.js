@@ -60,6 +60,18 @@ module.exports = function (grunt) {
                 dest: 'js/scripts.min.js'
             }
         },
+        modernizr: {
+            dist: {
+                crawl: false,
+                customTests: [],
+                dest: 'js/modernizr-output.js',
+                tests: [],
+                options: [
+                    'setClasses'
+                ],
+                uglify: true
+            }
+        },
         watch: {
             less: {
                 files: ['less/**/*.less'],
@@ -77,9 +89,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks("grunt-modernizr");
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('build:css', ['less', 'postcss', 'cssmin']);
-    grunt.registerTask('build', ['copy', 'build:css', 'uglify']);
+    grunt.registerTask('build', ['copy', 'build:css', 'uglify', 'modernizr']);
     grunt.registerTask('default', ['build', 'watch']);
 };
