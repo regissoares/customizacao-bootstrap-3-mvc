@@ -5,7 +5,7 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkID=513275&clcid=0
 module.exports = function (grunt) {
     grunt.initConfig({
         copy: {
-            dist: {
+            js: {
                 files: [
                     { expand: true, cwd: 'bower_components/jquery/dist/', src: ['**'], dest: 'Scripts/' },
                     { expand: true, cwd: 'bower_components/bootstrap/dist/fonts/', src: ['**'], dest: 'fonts/' },
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
             dist: {
                 crawl: false,
                 customTests: [],
-                dest: 'Scripts/modernizr-output.js',
+                dest: 'Scripts/modernizr.js',
                 tests: [],
                 options: [
                     'setClasses'

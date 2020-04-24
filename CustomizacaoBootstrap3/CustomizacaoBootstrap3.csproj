@@ -270,7 +270,7 @@
     <Content Include="Scripts\main.js" />
     <Content Include="package.json" />
     <Content Include="Scripts\main.min.js" />
-    <Content Include="Scripts\modernizr-output.js" />
+    <Content Include="Scripts\modernizr.js" />
     <Content Include="Scripts\npm.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
