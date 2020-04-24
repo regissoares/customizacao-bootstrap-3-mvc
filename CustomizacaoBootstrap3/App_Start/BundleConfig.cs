@@ -8,23 +8,25 @@ namespace CustomizacaoBootstrap3
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                        "~/js/scripts.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/js/jquery.js"));
+                        "~/Scripts/jquery.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/js/jquery.validate*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                        "~/js/bootstrap.js"));
+                        "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/js/modernizr-*"));
+                        "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/css/styles").Include(
-                        "~/css/style.css"));
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                        "~/Scripts/bootstrap.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
+                        "~/Scripts/main.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                        "~/Content/bootstrap.css",
+                        "~/Content/bootstrap-theme.css",
+                        "~/Content/site.css"));
         }
     }
 }

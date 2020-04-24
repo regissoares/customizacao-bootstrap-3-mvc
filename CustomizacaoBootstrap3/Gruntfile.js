@@ -7,11 +7,11 @@ module.exports = function (grunt) {
         copy: {
             dist: {
                 files: [
-                    { expand: true, cwd: 'bower_components/jquery/dist/', src: ['**'], dest: 'js/' },
+                    { expand: true, cwd: 'bower_components/jquery/dist/', src: ['**'], dest: 'Scripts/' },
                     { expand: true, cwd: 'bower_components/bootstrap/dist/fonts/', src: ['**'], dest: 'fonts/' },
-                    { expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['**'], dest: 'js/' },
-                    { expand: true, cwd: 'bower_components/jquery-validation/dist/', src: ['**'], dest: 'js/' },
-                    { expand: true, cwd: 'bower_components/jquery-validation-unobtrusive/src/', src: ['**'], dest: 'js/' }
+                    { expand: true, cwd: 'bower_components/bootstrap/dist/js/', src: ['**'], dest: 'Scripts/' },
+                    { expand: true, cwd: 'bower_components/jquery-validation/dist/', src: ['**'], dest: 'Scripts/' },
+                    { expand: true, cwd: 'bower_components/jquery-validation-unobtrusive/src/', src: ['**'], dest: 'Scripts/' }
                 ]
             }
         },
@@ -20,9 +20,17 @@ module.exports = function (grunt) {
                 ieCompat: true,
                 strictMath: true
             },
-            dist: {
-                src: 'less/style.less',
-                dest: 'css/style.css'
+            bootstrap: {
+                src: 'less/_bootstrap.less',
+                dest: 'Content/bootstrap.css'
+            },
+            theme: {
+                src: 'less/_theme.less',
+                dest: 'Content/bootstrap-theme.css'
+            },
+            site: {
+                src: 'less/site.less',
+                dest: 'Content/site.css'
             }
         },
         postcss: {
@@ -31,8 +39,14 @@ module.exports = function (grunt) {
                     require('autoprefixer')({ cascade: false })
                 ]
             },
-            dist: {
-                src: 'css/style.css'
+            bootstrap: {
+                src: 'Content/bootstrap.css'
+            },
+            theme: {
+                src: 'Content/bootstrap-theme.css'
+            },
+            site: {
+                src: 'Content/site.css'
             }
         },
         cssmin: {
@@ -44,9 +58,17 @@ module.exports = function (grunt) {
                     }
                 }
             },
-            dist: {
-                src: 'css/style.css',
-                dest: 'css/style.min.css'
+            bootstrap: {
+                src: 'Content/bootstrap.css',
+                dest: 'Content/bootstrap.min.css'
+            },
+            theme: {
+                src: 'Content/bootstrap-theme.css',
+                dest: 'Content/bootstrap-theme.min.css'
+            },
+            site: {
+                src: 'Content/site.css',
+                dest: 'Content/site.min.css'
             }
         },
         uglify: {
@@ -56,15 +78,15 @@ module.exports = function (grunt) {
                 ie8: true
             },
             dist: {
-                src: 'js/scripts.js',
-                dest: 'js/scripts.min.js'
+                src: 'Scripts/main.js',
+                dest: 'Scripts/main.min.js'
             }
         },
         modernizr: {
             dist: {
                 crawl: false,
                 customTests: [],
-                dest: 'js/modernizr-output.js',
+                dest: 'Scripts/modernizr-output.js',
                 tests: [],
                 options: [
                     'setClasses'
@@ -78,7 +100,7 @@ module.exports = function (grunt) {
                 tasks: 'build:css'
             },
             js: {
-                files: ['js/**/*.js'],
+                files: ['Scripts/**/*.js'],
                 tasks: 'uglify'
             }
         }
