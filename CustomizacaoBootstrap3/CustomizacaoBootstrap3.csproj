@@ -299,6 +299,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="less\_bootstrap.less" />
     <Content Include="less\_theme.less" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\site.css.map" />
+    <Content Include="Content\site.min.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-validation-sri.json" />
     <Content Include="Scripts\jquery.min.map" />
